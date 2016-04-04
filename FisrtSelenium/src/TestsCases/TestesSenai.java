@@ -1,9 +1,12 @@
-package br.com.selenium.testCases;
+package TestsCases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+
+import Util.Constants;
+import Util.WebDriverFactory;
 
 public class TestesSenai {
 
@@ -11,11 +14,14 @@ public class TestesSenai {
 public void testeEntrarSenai(){
 		
 		// findElement(By.id)//(By.name)//(By.class)
+		Constants constants = new Constants();
+		WebDriver driver = null;
 		
-		WebDriver driver = new FirefoxDriver();
-		driver.get("http://estudante.sc.senai.br/");
-		
+		String url ="http://estudante.sc.senai.br/";
+		driver = new WebDriverFactory().getInstance(url, constants.FIREFOX);
+			
 		WebElement user, password, but, banner, sair, esqSenha,link, tag;
+		//driver = wD.getInstance(url, constants.FIREFOX);
 		
 		user = driver.findElement(By.id("edit-name"));
 		user.sendKeys("fabiano_barroco");
@@ -50,8 +56,8 @@ public void testeEntrarSenai(){
 		
 					
 		//<a title="Espaço do Estudante" target="_blank" href="http://www.sc.senai.br/estudante/?_ga=1.181507682.431792142.1435323860">ESPAÇO DO ESTUDANTE</a>
-		link = driver.findElement(By.cssSelector(".gb_P"));
-		link.click();
+		//link = driver.findElement(By.cssSelector(".gb_P"));
+		//link.click();
 		
 	}		
 }

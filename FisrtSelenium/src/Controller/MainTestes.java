@@ -1,7 +1,7 @@
-package br.com.selenium;
+package Controller;
 
-import br.com.selenium.testCases.TestesGoogle;
-import br.com.selenium.testCases.TestesSenai;
+import TestsCases.TestesGoogle;
+import TestsCases.TestesSenai;
 
 public class MainTestes {
 
@@ -10,11 +10,11 @@ public class MainTestes {
 		//comentário testes
 		
 		TestesSenai teste1 = new TestesSenai();
-		TestesGoogle teste2 = new TestesGoogle();
+		//TestesGoogle teste2 = new TestesGoogle();
 		
 		
 		teste1.testeEntrarSenai();
-		teste2.testesGoogle();
+		//teste2.testesGoogle();
 		
 	}
 
