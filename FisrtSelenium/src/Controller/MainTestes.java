@@ -1,6 +1,6 @@
 package Controller;
 
-import TestsCases.TestesGoogle;
+//import TestsCases.TestesGoogle;
 import TestsCases.TestesSenai;
 
 public class MainTestes {

@@ -3,8 +3,6 @@ package TestsCases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import Util.Constants;
 import Util.WebDriverFactory;
 
@@ -15,13 +13,13 @@ public void testeEntrarSenai(){
 		
 		// findElement(By.id)//(By.name)//(By.class)
 		Constants constants = new Constants();
-		WebDriver driver = null;
+		
 		
 		String url ="http://estudante.sc.senai.br/";
-		driver = new WebDriverFactory().getInstance(url, constants.FIREFOX);
 			
-		WebElement user, password, but, banner, sair, esqSenha,link, tag;
-		//driver = wD.getInstance(url, constants.FIREFOX);
+		WebElement user, password, but, banner, sair, esqSenha,link , tag;
+		WebDriver driver = new WebDriverFactory().getInstance(url, constants.FIREFOX);
+		
 		
 		user = driver.findElement(By.id("edit-name"));
 		user.sendKeys("fabiano_barroco");
