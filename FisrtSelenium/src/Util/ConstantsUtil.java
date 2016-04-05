@@ -1,6 +1,6 @@
 package Util;
 
-public class Constants {
+public class ConstantsUtil {
 
 	/* Browsers constants */
 	public static final String CHROME = "chrome";

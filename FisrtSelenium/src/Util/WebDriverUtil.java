@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverUtil implements WebDriver {
 
-	Constants constants = new Constants();
+	ConstantsUtil constants = new ConstantsUtil();
 
 	public WebDriverUtil() {
 	}
@@ -20,7 +20,7 @@ public class WebDriverUtil implements WebDriver {
 		WebDriver webDriver = null;
 		
 		
-		if(browsers == Constants.FIREFOX){			
+		if(browsers == ConstantsUtil.FIREFOX){			
 			webDriver = new FirefoxDriver();
 			webDriver.get(url);
 				

@@ -4,16 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Util.Constants;
+import Util.ConstantsUtil;
 import Util.WebDriverUtil;
 
 public class TestesDigilab {
 
-	Constants constants = new Constants();
+	ConstantsUtil constants = new ConstantsUtil();
 	String resultExecucao = "";
 	String url = "http://www.digilab.com.br/";
 	WebElement link, tag, userLogado;
-	WebDriver driver = WebDriverUtil.getInstance(url,Constants.FIREFOX);
+	WebDriver driver = WebDriverUtil.getInstance(url,ConstantsUtil.FIREFOX);
 
 	public String aEmpresa() {
 
@@ -26,11 +26,11 @@ public class TestesDigilab {
 
 		} catch (Exception e) {
 
-			return resultExecucao += "A Empresa " + Constants.NAOPASSOU;
+			return resultExecucao += "A Empresa " + ConstantsUtil.NAOPASSOU;
 		}
 
 		//System.out.println(resultExecucao);
-		return resultExecucao = resultExecucao + "A Empresa " + Constants.PASSOU;
+		return resultExecucao = resultExecucao + "A Empresa " + ConstantsUtil.PASSOU;
 
 	}
 

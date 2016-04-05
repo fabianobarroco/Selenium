@@ -16,8 +16,8 @@ public class EmailUtil {
 	public void envioEmail(String msg) {
 
 	
-	final String username = "fabianobarroco@gmail.com";
-	final String password = "";
+	final String username = "seleniumMailTests@gmail.com";
+	final String password = "selenium2016";
 	final Instant agora = Instant.now();
 	final String dataAtual = agora.toString();
 
