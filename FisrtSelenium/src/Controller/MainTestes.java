@@ -1,21 +1,31 @@
 package Controller;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+import TestsCases.TestesDigilab;
 //import TestsCases.TestesGoogle;
 import TestsCases.TestesSenai;
+import Util.EmailUtil;
 
 public class MainTestes {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		//comentário testes
-		
-		TestesSenai teste1 = new TestesSenai();
-		//TestesGoogle teste2 = new TestesGoogle();
-		
-		
-		teste1.testeEntrarSenai();
-		//teste2.testesGoogle();
-		
+	static String LOG = "";
+
+	public static void main(String[] args) throws AddressException, MessagingException {
+
+		TestesSenai case1 = new TestesSenai();
+		TestesDigilab case3 = new TestesDigilab();
+		// TestesGoogle case2 = new TestesGoogle();
+
+		LOG = LOG + case1.validarLoginSenai();
+		LOG = LOG + case1.fecharBannerSenai();
+		LOG = LOG + case3.aEmpresa();
+		// case2.testesGoogle();
+
+		EmailUtil mail = new EmailUtil();
+		mail.envioEmail(LOG);
+
+		System.out.println(LOG);
 	}
 
 }

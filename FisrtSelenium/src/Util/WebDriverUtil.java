@@ -8,11 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class WebDriverFactory implements WebDriver {
+public class WebDriverUtil implements WebDriver {
 
 	Constants constants = new Constants();
 
-	public WebDriverFactory() {
+	public WebDriverUtil() {
 	}
 
 	public static WebDriver getInstance(String url, String browsers) {

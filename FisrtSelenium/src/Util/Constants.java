@@ -7,7 +7,15 @@ public class Constants {
 	public static final String FIREFOX = "firefox";
 	public static final String OPERA = "opera";
 	public static final String INTERNET_EXPLORER = "ie";
+	public static final String PASSOU = "Passou" + "\n";
+	public static final String NAOPASSOU = "Não Passou" + "\n";
 	
+	public static String getPassou() {
+		return PASSOU;
+	}
+	public static String getNaopassou() {
+		return NAOPASSOU;
+	}
 	public static String getChrome() {
 		return CHROME;
 	}
