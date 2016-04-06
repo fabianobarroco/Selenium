@@ -19,7 +19,7 @@ public class TestesSenai {
 
 		try {
 
-			//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			// driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 			user = driver.findElement(By.id("edit-name"));
 			user.sendKeys("fabiano_barroco");
@@ -52,7 +52,7 @@ public class TestesSenai {
 		}
 
 		// System.out.println(resultExecucao);
-		return resultExecucao +=  "FecharBannerSenai " + ConstantsUtil.PASSOU;
+		return resultExecucao += "FecharBannerSenai " + ConstantsUtil.PASSOU;
 
 	}
 
