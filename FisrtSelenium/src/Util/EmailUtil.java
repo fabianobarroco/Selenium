@@ -1,6 +1,5 @@
 package Util;
 
-import java.time.Instant;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -18,8 +17,8 @@ public class EmailUtil {
 	
 	final String username = "seleniumMailTests@gmail.com";
 	final String password = "selenium2016";
-	final Instant agora = Instant.now();
-	final String dataAtual = agora.toString();
+	DataUtil data = new DataUtil();
+	final String dataAtual = data.dataAtual();
 
 	Properties props = new Properties();
 	props.put("mail.smtp.auth",true);

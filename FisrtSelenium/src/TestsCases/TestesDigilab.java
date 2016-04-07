@@ -1,6 +1,5 @@
 package TestsCases;
 
-import org.apache.http.impl.io.SocketOutputBuffer;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,8 +14,21 @@ public class TestesDigilab {
 	ConstantsUtil constants = new ConstantsUtil();
 	String resultExecucao = "";
 	String url = "http://www.digilab.com.br/";
+	String file = "file:///F:/eclipse/workspace/index.html";
 	WebElement link, tag, userLogado, combo;
-	WebDriver driver = WebDriverUtil.getInstance(url, ConstantsUtil.FIREFOX);
+	WebDriver driver;// = WebDriverUtil.getInstance(url, ConstantsUtil.FIREFOX);
+
+	public String lerArquivo() {
+		
+		driver = WebDriverUtil.getInstance(file, ConstantsUtil.FIREFOX);
+		tag = driver.findElement(By.name("email"));
+		tag.sendKeys("TESTE");
+		String elemento = tag.getTagName();
+		
+		System.out.println(elemento);
+		
+		return "lerArquivo";
+	}
 
 	public String aEmpresa() {
 

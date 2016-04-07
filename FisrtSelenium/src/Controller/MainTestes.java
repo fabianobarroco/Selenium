@@ -17,13 +17,14 @@ public class MainTestes {
 
 		//LOG += case1.validarLoginSenai();
 		//LOG += case1.fecharBannerSenai();
-		LOG += case3.aEmpresa();
+		LOG += case3.lerArquivo();
 		// case2.testesGoogle();
 
-		//EmailUtil mail = new EmailUtil();
-		//mail.envioEmail(LOG);
+		EmailUtil mail = new EmailUtil();
+		mail.envioEmail(LOG);
 
 		System.out.println(LOG);
 	}
-
+	//https://www.youtube.com/watch?v=0bHk7HCbcDQ
+	//https://github.com/demoiselle/behave/blob/master/impl/runner/webdriver/src/main/java/br/gov/frameworkdemoiselle/behave/runner/webdriver/ui/WebBase.java
 }
