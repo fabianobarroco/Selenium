@@ -1,6 +1,6 @@
-package Util;
+package Config;
 
-public class ConstantsUtil {
+public class Constants {
 
 	/* Browsers constants */
 	public static final String CHROME = "chrome";
@@ -8,8 +8,16 @@ public class ConstantsUtil {
 	public static final String OPERA = "opera";
 	public static final String INTERNET_EXPLORER = "ie";
 	public static final String PASSOU = "Passou" + "\n";
-	public static final String NAOPASSOU = "Não Passou" + "\n";
+	public final static String NAOPASSOU = "Não Passou" + "\n";
+	public static final String PLAYCHANNEL = "PlayChannel";
+	public static final String PLAYOUT = "PlayOut";
 	
+	public static String getPlaychannel() {
+		return PLAYCHANNEL;
+	}
+	public static String getPlayout() {
+		return PLAYOUT;
+	}
 	public static String getPassou() {
 		return PASSOU;
 	}

@@ -1,9 +1,9 @@
-package Util;
+package Config;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class DataUtil {
+public class Data {
 
 	public String dataAtual(){
 		

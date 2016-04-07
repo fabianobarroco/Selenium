@@ -5,21 +5,34 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import Config.Constants;
+import Config.Excecao;
+import Config.WebDriverSetup;
+
 public class TestesGoogle {
 
-			public void testesGoogle() {
+	public String pesquisaGoogle(String parameter) {
+		String url = "https://www.google.com.br/";
+		WebDriver driver = WebDriverSetup.getInstance(url, Constants.FIREFOX);
+		WebElement x1;
+
+		try {
 			
-			WebDriver driver = new FirefoxDriver();
-			driver.get("https://www.google.com.br/");
-			
-			WebElement testeCss;
-			
-		
-		//<a title="Espaço do Estudante" target="_blank" href="http://www.sc.senai.br/estudante/?_ga=1.181507682.431792142.1435323860">ESPAÇO DO ESTUDANTE</a>
-			testeCss = driver.findElement(By.cssSelector(".gb_P"));
-			testeCss.click();
+
+			x1 = driver.findElement(By.xpath(".//*[@id='gs_htif0']"));
+			x1.isEnabled();
+			WebElement inputPesq = driver.findElement(By.xpath(".//*[@id='gs_htif0']"));
+			inputPesq.sendKeys(parameter);
+						
+			WebElement btPesq = driver.findElement(By.xpath(".//*[@id='tsf']/div[2]/div[3]/center/input[1]"));
+			btPesq.click();
+
+		} catch (Exception e) {
+
+			return Excecao.returnTestCase("pesquisaGoogle", parameter, Constants.NAOPASSOU, e);
 		}
+
+		return Excecao.returnTestCase("pesquisaGoogle", parameter, Constants.PASSOU, null);
+
 	}
-
-	
-
+}

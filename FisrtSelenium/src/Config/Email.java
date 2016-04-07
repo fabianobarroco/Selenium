@@ -1,4 +1,4 @@
-package Util;
+package Config;
 
 import java.util.Properties;
 
@@ -10,14 +10,14 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class EmailUtil {
+public class Email {
 
 	public void envioEmail(String msg) {
 
 	
 	final String username = "seleniumMailTests@gmail.com";
 	final String password = "selenium2016";
-	DataUtil data = new DataUtil();
+	Data data = new Data();
 	final String dataAtual = data.dataAtual();
 
 	Properties props = new Properties();

@@ -1,4 +1,4 @@
-package Util;
+package Config;
 
 import java.util.List;
 import java.util.Set;
@@ -8,11 +8,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class WebDriverUtil implements WebDriver {
+public class WebDriverSetup implements WebDriver {
 
-	ConstantsUtil constants = new ConstantsUtil();
+	Constants constants = new Constants();
 
-	public WebDriverUtil() {
+	public WebDriverSetup() {
 	}
 
 	public static WebDriver getInstance(String url, String browsers) {
@@ -20,7 +20,7 @@ public class WebDriverUtil implements WebDriver {
 		WebDriver webDriver = null;
 		
 		
-		if(browsers == ConstantsUtil.FIREFOX){			
+		if(browsers == Constants.FIREFOX){			
 			webDriver = new FirefoxDriver();
 			webDriver.get(url);
 				

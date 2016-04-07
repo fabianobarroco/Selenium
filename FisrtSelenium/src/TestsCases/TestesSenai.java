@@ -4,16 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Util.ConstantsUtil;
-import Util.WebDriverUtil;
+import Config.Constants;
+import Config.WebDriverSetup;
 
 public class TestesSenai {
 
-	ConstantsUtil constants = new ConstantsUtil();
+	Constants constants = new Constants();
 	String resultExecucao = "";
 	String url = "http://estudante.sc.senai.br/";
 	WebElement user, password, but, banner, sair, esqSenha, link, tag, userLogado;
-	WebDriver driver = WebDriverUtil.getInstance(url, ConstantsUtil.FIREFOX);
+	WebDriver driver = WebDriverSetup.getInstance(url, Constants.FIREFOX);
 
 	public String validarLoginSenai() {
 
@@ -32,11 +32,11 @@ public class TestesSenai {
 
 		} catch (Exception e) {
 
-			return resultExecucao += "ValidarLoginSenai " + ConstantsUtil.NAOPASSOU;
+			return resultExecucao += "ValidarLoginSenai " + Constants.NAOPASSOU;
 		}
 
 		// System.out.println(resultExecucao);
-		return resultExecucao += "ValidarLoginSenai " + ConstantsUtil.PASSOU;
+		return resultExecucao += "ValidarLoginSenai " + Constants.PASSOU;
 
 	};
 
@@ -48,11 +48,11 @@ public class TestesSenai {
 
 		} catch (Exception e) {
 
-			return resultExecucao += "FecharBannerSenai " + ConstantsUtil.NAOPASSOU;
+			return resultExecucao += "FecharBannerSenai " + Constants.NAOPASSOU;
 		}
 
 		// System.out.println(resultExecucao);
-		return resultExecucao += "FecharBannerSenai " + ConstantsUtil.PASSOU;
+		return resultExecucao += "FecharBannerSenai " + Constants.PASSOU;
 
 	}
 
