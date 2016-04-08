@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 import Config.Constants;
 import Config.Excecao;
@@ -35,20 +36,16 @@ public class TestesDigilab {
 			new Actions(driver).moveToElement(driver.findElement(By.id("menu-item-3783"))).perform();
 			driver.findElement(By.cssSelector("#menu-item-3881>a")).click();
 
-			// Formulário Contato <form class="wpcf7-form"
-			// novalidate="novalidate" method="post"
-			// action="/contato/#wpcf7-f4350-p25-o1">
+		
 			WebElement formulario = driver.findElement(By.className("wpcf7-form"));
-			// driver.findElement(By.name("your-name")).sendKeys("Fabiano");
+			 driver.findElement(By.name("your-name")).sendKeys("Fabiano");
 			// driver.findElement(By.name("your-email")).sendKeys("fabianoBarroco@gmail.com");
-			// driver.findElement(By.name("Empresa")).sendKeys("Digilab");
-			// driver.findElement(By.name("Telefone")).sendKeys("4838790655");
-			// driver.findElement(By.name("Segmento")).sendKeys("Digilab");
-			// Select selectbox = (Select) new
-			// Select(driver.findElement(By.name("Segmento")));
-			// selectbox.selectByValue("OUTROS");
-			// driver.findElement(By.name("your-message")).sendKeys("Testes de
-			// preenchimento do formulário!!!");
+			 driver.findElement(By.name("Empresa")).sendKeys("Digilab");
+			 driver.findElement(By.name("Telefone")).sendKeys("4832323232");
+
+			 Select selectbox = new Select(driver.findElement(By.name("Segmento")));
+			 selectbox.selectByValue("OUTROS");
+			driver.findElement(By.name("your-message")).sendKeys("Testes de preenchimento do formulário!!!");
 			
 			formulario.submit();
 			

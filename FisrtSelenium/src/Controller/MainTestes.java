@@ -1,5 +1,8 @@
 package Controller;
 
+import java.io.IOException;
+
+import Config.Arquivo;
 import Config.Constants;
 import Config.Email;
 import TestsCases.TestesDigilab;
@@ -8,7 +11,7 @@ public class MainTestes{
 
 	static String LOG = "";
 
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
 
 		
 		TestesDigilab formulario = new TestesDigilab();
@@ -21,8 +24,12 @@ public class MainTestes{
 		
 		System.out.println(LOG);
 		
+
 		Email mail = new Email();
 		mail.envioEmail(LOG);
+		
+		Arquivo log = new Arquivo();
+		log.gerarArquivoLog(LOG);
 
 		
 	}
